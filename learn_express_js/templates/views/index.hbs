@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="text/stylesheet" href="public/css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "gilroy";
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            /*background-color: antiquewhite;*/
+        }
+
+
+
+        #main {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        #left {
+            position: relative;
+            width: 40%;
+            height: 100%;
+        }
+
+        #lnav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px 30px;
+
+        }
+
+        #lnavr {
+            display: flex;
+            align-items: center;
+        }
+
+        #lnavr a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: black;
+            font-weight: 900;
+            font-size: 14px;
+        }
+
+        #lnavr i {
+            color: royalblue;
+        }
+
+        #left #textcenter {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #textcenter h1 {
+            font-size: 90px;
+            font-weight: 900;
+        }
+
+        #textcenter p {
+            opacity: 7;
+            line-height: 20px;
+            font-size: 12px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #textcenter a {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: black;
+            border-bottom: 1px solid blue;
+            padding-bottom: 5px;
+            font-size: 13px;
+            font-weight: 700;
+            opacity: 6;
+        }
+
+
+        #right {
+            width: 60%;
+            height: 100%;
+        }
+
+        #rtop {
+            display: flex;
+            width: 100%;
+            height: 50%;
+        }
+
+        #rtopleft {
+            width: 60%;
+            height: 100%;
+            background-image: url(https://images.pexels.com/photos/4388168/pexels-photo-4388168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #rtopright {
+            width: 60%;
+            height: 100%;
+            background-image: url(https://images.pexels.com/photos/1851481/pexels-photo-1851481.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #rbottom {
+            width: 100%;
+            height: 50%;
+            background-image: url(https://images.pexels.com/photos/2101774/pexels-photo-2101774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-size: cover;
+            background-position: bottom;
+        }
+
+        @media(max-width: 500px) {
+            #main {
+                flex-direction: column;
+            }
+
+            #main #left {
+                width: 100%;
+            }
+
+            #main #right {
+                width: 100%;
+            }
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <div id="main">
+        <div id="left">
+            {{>lnav}}
+            {{>textcenter}}
+        </div>
+        <div id="right">
+            <div id="rtop">
+                <div id="rtopleft"></div>
+                <div id="rtopright"></div>
+            </div>
+            <div id="rbottom"></div>
+        </div>
+    </div>
+</body>
+
+</html>
