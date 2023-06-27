@@ -25,7 +25,7 @@ event.on("sayhello",()=>{
 
 event.emit("sayhello");
 
-//  thw concept is quite simple =====>>>>>
+//  the concept is quite simple =====>>>>>
 // emitter object emit named events that cause previously register listeners to be called. 
 // so, an emitter object has basically two main feature
 // 1=> emitting name event
