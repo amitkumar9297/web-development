@@ -1,0 +1,50 @@
+.section {
+  z-index: 0;
+  width: 80vw;
+  height: 80vh;
+  padding: 10vh 10vw;
+  margin: 0;
+  position: relative;
+  overflow: clip;
+  background-color: var(--black);
+}
+.section::before {
+  z-index: -1;
+  position: absolute;
+  inset: -0vh -50vw;
+  /*! change the angle here */
+  transform: skew(25deg);
+  content: " ";
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, var(--gary), var(--black) 95.71%);
+}
+.CardView {
+  font-family: myFont;
+  z-index: 10;
+  background-color: var(--darkblue);
+  border-radius: 20px;
+  display: flex;
+  padding-inline: 3em;
+  padding-block: 3em;
+  box-shadow: rgba(99, 99, 99, 0.35) 0px 5px 2em;
+  width: calc(80vw - 6em);
+  height: calc(80vh - 6em);
+  overflow-y: clip;
+  align-items: center;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  /* scroll-margin-inline: 3em; */
+  scroll-padding-inline: 3em;
+  gap: 1.75em;
+}
+.CardView::-webkit-scrollbar {
+  display: none;
+}
+.award {
+  z-index: 10;
+  position: absolute;
+  top: 15%;
+  left: calc(10vw + 2em);
+  font-size: 1.5em;
+}

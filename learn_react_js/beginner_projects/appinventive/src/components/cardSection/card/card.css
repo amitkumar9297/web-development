@@ -1,0 +1,119 @@
+.wrapperStyle {
+  font-family: myFont;
+  /* position: "relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkblue);
+  border-radius: 20px;
+  padding-inline: 3em;
+  padding-block: 3em;
+  box-shadow: rgba(99, 99, 99, 0.35) 0px 5px 2em;
+  width: calc(80vw - 6em);
+  height: calc(80vh - 6em);
+  overflow: clip;
+}
+/* .CardView {
+    z-index: 10;
+    display: flex;
+    overflow-x: scroll;
+  align-items: center;
+  scroll-snap-type: x mandatory;
+  scroll-margin-inline: 3em;
+  scroll-padding-inline: 3em;
+  gap: 1.75em;
+}
+.CardView::-webkit-scrollbar {
+  display: none;
+} */
+.cardWrapStyle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.cardStyle {
+  background-color: var(--darkblue);
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  border-radius: 1em;
+  transform-origin: top center;
+  list-style: none;
+}
+
+.card {
+  color: var(--white);
+  display: flex;
+  align-self: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  gap: max(1.5em, 3vw);
+}
+
+.details {
+  overflow: clip;
+  width: max-content;
+  height: fit-content;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-self: center;
+  gap: 1em;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.details h3 {
+  font-size: 3.5em;
+  margin: 0;
+}
+.details p {
+  margin: 0;
+  font-size: 1.2em;
+}
+.details a {
+  font-size: 1.1em;
+  text-decoration: none;
+  width: fit-content;
+  align-self: self-end;
+}
+.details a:visited {
+  color: var(--white);
+}
+.details a {
+  width: fit-content;
+  align-self: self-end;
+}
+.imgView {
+  width: 40%;
+  height: 90%;
+  top: 10vh;
+  right: 0%;
+  height: calc(80vh);
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  gap: 3em;
+}
+.img {
+  position: sticky;
+  border-radius: 1em;
+  height: 60%;
+  pointer-events: none;
+  filter: brightness(70%);
+  object-fit: cover;
+  width: fit-content;
+  align-self: center;
+  aspect-ratio: 1/1.85;
+  transition: height 0.3s;
+}
+.cardStyle:first-of-type img {
+  filter: brightness(100%);
+  height: 80%;
+}
+.cardStyle:first-of-type .details {
+  opacity: 1;
+}
